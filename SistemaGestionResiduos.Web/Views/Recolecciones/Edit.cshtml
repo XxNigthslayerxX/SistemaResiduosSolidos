@@ -1,0 +1,61 @@
+@model SistemaGestionResiduos.Domain.Entities.Recoleccion
+
+@{
+    ViewData["Title"] = "Editar Recolección";
+}
+
+<h1>Editar Recolección</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control" type="datetime-local" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PesoRecolectado" class="control-label"></label>
+                <input asp-for="PesoRecolectado" class="form-control" />
+                <span asp-validation-for="PesoRecolectado" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TipoResiduo" class="control-label"></label>
+                <select asp-for="TipoResiduo" class="form-control">
+                    <option value="Orgánico">Orgánico</option>
+                    <option value="Plástico">Plástico</option>
+                    <option value="Papel">Papel</option>
+                    <option value="Vidrio">Vidrio</option>
+                    <option value="Metal">Metal</option>
+                </select>
+                <span asp-validation-for="TipoResiduo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Observaciones" class="control-label"></label>
+                <textarea asp-for="Observaciones" class="form-control"></textarea>
+                <span asp-validation-for="Observaciones" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ContenedorId" class="control-label">Contenedor</label>
+                <select asp-for="ContenedorId" class="form-control" asp-items="ViewBag.Contenedores"></select>
+                <span asp-validation-for="ContenedorId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

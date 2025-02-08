@@ -1,0 +1,60 @@
+@model SistemaGestionResiduos.Domain.Entities.Contenedor
+
+@{
+    ViewData["Title"] = "Crear Contenedor";
+}
+
+<h1>Crear Contenedor</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="Ubicacion" class="control-label"></label>
+                <input asp-for="Ubicacion" class="form-control" />
+                <span asp-validation-for="Ubicacion" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Capacidad" class="control-label"></label>
+                <input asp-for="Capacidad" class="form-control" />
+                <span asp-validation-for="Capacidad" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="NivelLlenado" class="control-label"></label>
+                <input asp-for="NivelLlenado" class="form-control" />
+                <span asp-validation-for="NivelLlenado" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TipoResiduo" class="control-label"></label>
+                <select asp-for="TipoResiduo" class="form-control">
+                    <option value="Orgánico">Orgánico</option>
+                    <option value="Plástico">Plástico</option>
+                    <option value="Papel">Papel</option>
+                    <option value="Vidrio">Vidrio</option>
+                    <option value="Metal">Metal</option>
+                </select>
+                <span asp-validation-for="TipoResiduo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="RutaId" class="control-label">Ruta</label>
+                <select asp-for="RutaId" class="form-control" asp-items="ViewBag.Rutas"></select>
+                <span asp-validation-for="RutaId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mt-3">
+                <input type="submit" value="Crear" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

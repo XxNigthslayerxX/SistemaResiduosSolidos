@@ -1,0 +1,41 @@
+@model IEnumerable<SistemaGestionResiduos.Domain.Entities.Ruta>
+
+@{
+    ViewData["Title"] = "Rutas";
+}
+
+<h1>Rutas de Recolección</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Crear Nueva Ruta</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+            <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
+            <th>@Html.DisplayNameFor(model => model.HoraInicio)</th>
+            <th>@Html.DisplayNameFor(model => model.HoraFin)</th>
+            <th>@Html.DisplayNameFor(model => model.DiasServicio)</th>
+            <th>@Html.DisplayNameFor(model => model.Activo)</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                <td>@Html.DisplayFor(modelItem => item.Descripcion)</td>
+                <td>@Html.DisplayFor(modelItem => item.HoraInicio)</td>
+                <td>@Html.DisplayFor(modelItem => item.HoraFin)</td>
+                <td>@Html.DisplayFor(modelItem => item.DiasServicio)</td>
+                <td>@Html.DisplayFor(modelItem => item.Activo)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

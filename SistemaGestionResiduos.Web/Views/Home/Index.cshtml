@@ -1,0 +1,73 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Sistema de Gestión de Residuos Sólidos</h1>
+    <p class="lead">Bienvenido al sistema de gestión de residuos sólidos municipal.</p>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-3">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Total de Rutas</h5>
+                <p class="card-text display-4">@ViewBag.TotalRutas</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Total de Contenedores</h5>
+                <p class="card-text display-4">@ViewBag.TotalContenedores</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Total de Recolecciones</h5>
+                <p class="card-text display-4">@ViewBag.TotalRecolecciones</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Peso Total Recolectado</h5>
+                <p class="card-text display-4">@ViewBag.PesoTotalRecolectado kg</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Gestión de Rutas</h5>
+                <p class="card-text">Administre las rutas de recolección, horarios y asignaciones.</p>
+                <a asp-controller="Rutas" asp-action="Index" class="btn btn-primary">Ir a Rutas</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Gestión de Contenedores</h5>
+                <p class="card-text">Administre los contenedores, ubicaciones y niveles de llenado.</p>
+                <a asp-controller="Contenedores" asp-action="Index" class="btn btn-success">Ir a Contenedores</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Registro de Recolecciones</h5>
+                <p class="card-text">Registre y consulte las recolecciones realizadas.</p>
+                <a asp-controller="Recolecciones" asp-action="Index" class="btn btn-info">Ir a Recolecciones</a>
+            </div>
+        </div>
+    </div>
+</div>

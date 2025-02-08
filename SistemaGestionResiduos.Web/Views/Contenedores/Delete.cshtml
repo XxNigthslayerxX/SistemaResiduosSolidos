@@ -1,0 +1,60 @@
+@model SistemaGestionResiduos.Domain.Entities.Contenedor
+
+@{
+    ViewData["Title"] = "Eliminar Contenedor";
+}
+
+<h1>Eliminar Contenedor</h1>
+
+<h3>¿Está seguro de que desea eliminar este contenedor?</h3>
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ubicacion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ubicacion)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Capacidad)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Capacidad)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NivelLlenado)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NivelLlenado)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TipoResiduo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TipoResiduo)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.UltimaRecoleccion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.UltimaRecoleccion)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Ruta)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Ruta.Nombre)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-danger" />
+        <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
+    </form>
+</div>
