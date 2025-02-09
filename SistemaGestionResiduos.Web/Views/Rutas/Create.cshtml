@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="col-md-6">
-        <form asp-action="Create">
+        <form asp-action="Create" id="createRutaForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
             <div class="form-group">
@@ -54,7 +54,7 @@
             </div>
 
             <div class="form-group mt-3">
-                <input type="submit" value="Crear" class="btn btn-primary" />
+                <input type="submit" value="Crear" class="btn btn-primary" id="submitButton"/>
                 <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
             </div>
         </form>
@@ -63,4 +63,30 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        $(document).ready(function () {
+            $('#createRutaForm').on('submit', function (e) {
+                console.log('Formulario enviado');
+                
+                // Obtener los valores del formulario
+                var formData = {
+                    Nombre: $('#Nombre').val(),
+                    Descripcion: $('#Descripcion').val(),
+                    HoraInicio: $('#HoraInicio').val(),
+                    HoraFin: $('#HoraFin').val(),
+                    DiasServicio: $('#DiasServicio').val(),
+                    Activo: $('#Activo').is(':checked')
+                };
+                
+                console.log('Datos del formulario:', formData);
+                
+                // Validar que todos los campos requeridos estén llenos
+                if (!formData.Nombre || !formData.HoraInicio || !formData.HoraFin || !formData.DiasServicio) {
+                    console.log('Faltan campos requeridos');
+                    return;
+                }
+            });
+        });
+    </script>
 }

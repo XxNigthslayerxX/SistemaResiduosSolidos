@@ -6,6 +6,17 @@ namespace SistemaGestionResiduos.Domain.Entities
 {
     public class Ruta
     {
+        public Ruta()
+        {
+            Contenedores = new List<Contenedor>();
+            Nombre = string.Empty;
+            Descripcion = string.Empty;
+            DiasServicio = string.Empty;
+            HoraInicio = TimeSpan.Zero;
+            HoraFin = TimeSpan.Zero;
+            Activo = true;
+        }
+
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El nombre es requerido")]

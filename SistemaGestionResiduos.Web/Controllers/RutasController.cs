@@ -29,12 +29,50 @@ namespace SistemaGestionResiduos.Web.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Ruta ruta)
         {
-            if (ModelState.IsValid)
+            Console.WriteLine($"\nIntentando crear ruta: {ruta.Nombre}");
+            Console.WriteLine($"Datos de la ruta:");
+            Console.WriteLine($"- Nombre: {ruta.Nombre}");
+            Console.WriteLine($"- Descripción: {ruta.Descripcion}");
+            Console.WriteLine($"- Hora Inicio: {ruta.HoraInicio}");
+            Console.WriteLine($"- Hora Fin: {ruta.HoraFin}");
+            Console.WriteLine($"- Días Servicio: {ruta.DiasServicio}");
+            Console.WriteLine($"- Activo: {ruta.Activo}");
+
+            if (!ModelState.IsValid)
             {
-                await _rutaService.CreateRutaAsync(ruta);
+                var errors = string.Join("; ", ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage));
+                Console.WriteLine($"ModelState errors: {errors}");
+                return View(ruta);
+            }
+
+            try
+            {
+                Console.WriteLine("Llamando a CreateRutaAsync...");
+                var rutaCreada = await _rutaService.CreateRutaAsync(ruta);
+                Console.WriteLine($"Ruta creada exitosamente con ID: {rutaCreada.Id}");
+
+                // Verificar que la ruta se guardó correctamente
+                var rutaGuardada = await _rutaService.GetRutaByIdAsync(rutaCreada.Id);
+                if (rutaGuardada != null)
+                {
+                    Console.WriteLine($"Verificación: Ruta encontrada en la base de datos con ID {rutaGuardada.Id}");
+                }
+                else
+                {
+                    Console.WriteLine("¡ADVERTENCIA! No se pudo encontrar la ruta recién creada en la base de datos");
+                }
+
                 return RedirectToAction(nameof(Index));
             }
-            return View(ruta);
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al crear ruta: {ex.Message}");
+                Console.WriteLine($"StackTrace: {ex.StackTrace}");
+                ModelState.AddModelError("", "Error al guardar la ruta.");
+                return View(ruta);
+            }
         }
 
         public async Task<IActionResult> Edit(int id)
@@ -53,15 +91,32 @@ namespace SistemaGestionResiduos.Web.Controllers
         {
             if (id != ruta.Id)
             {
+                Console.WriteLine($"ID no coincide: {id} vs {ruta.Id}");
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
+                var errors = string.Join("; ", ModelState.Values
+                    .SelectMany(v => v.Errors)
+                    .Select(e => e.ErrorMessage));
+                Console.WriteLine($"ModelState errors: {errors}");
+                return View(ruta);
+            }
+
+            try
+            {
+                Console.WriteLine($"Intentando actualizar ruta: {ruta.Nombre}");
                 await _rutaService.UpdateRutaAsync(ruta);
+                Console.WriteLine("Ruta actualizada exitosamente");
                 return RedirectToAction(nameof(Index));
             }
-            return View(ruta);
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al actualizar ruta: {ex.Message}");
+                ModelState.AddModelError("", "Error al actualizar la ruta.");
+                return View(ruta);
+            }
         }
 
         public async Task<IActionResult> Delete(int id)

@@ -1,11 +1,23 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaGestionResiduos.Domain.Entities
 {
     public class Contenedor
     {
+        public Contenedor()
+        {
+            Recolecciones = new List<Recoleccion>();
+            UltimaRecoleccion = DateTime.Now;
+            Ubicacion = string.Empty;
+            TipoResiduo = string.Empty;
+            Capacidad = 0;
+            NivelLlenado = 0;
+            RutaId = 0;
+        }
+
         public int Id { get; set; }
 
         [Required(ErrorMessage = "La ubicación es requerida")]
@@ -33,7 +45,9 @@ namespace SistemaGestionResiduos.Domain.Entities
         [Display(Name = "Ruta")]
         public int RutaId { get; set; }
 
-        public virtual Ruta Ruta { get; set; }
+        [ForeignKey("RutaId")]
+        public virtual Ruta? Ruta { get; set; }
+
         public virtual ICollection<Recoleccion> Recolecciones { get; set; }
     }
 }

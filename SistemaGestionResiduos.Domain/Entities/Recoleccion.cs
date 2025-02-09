@@ -1,10 +1,19 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaGestionResiduos.Domain.Entities
 {
     public class Recoleccion
     {
+        public Recoleccion()
+        {
+            Fecha = DateTime.Now;
+            PesoRecolectado = 0;
+            TipoResiduo = ""; // Inicializar string para evitar null
+            Observaciones = ""; // Inicializar string para evitar null
+        }
+
         public int Id { get; set; }
 
         [Required(ErrorMessage = "La fecha es requerida")]
@@ -26,6 +35,7 @@ namespace SistemaGestionResiduos.Domain.Entities
         [Display(Name = "Contenedor")]
         public int ContenedorId { get; set; }
 
-        public virtual Contenedor Contenedor { get; set; }
+        [ForeignKey("ContenedorId")]
+        public virtual Contenedor? Contenedor { get; set; }
     }
 }

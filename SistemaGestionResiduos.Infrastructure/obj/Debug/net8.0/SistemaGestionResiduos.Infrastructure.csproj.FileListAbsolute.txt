@@ -26,6 +26,7 @@ C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Infrastructure\obj\
 C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Infrastructure\obj\Debug\net8.0\SistemaGestionResiduos.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Infrastructure\obj\Debug\net8.0\SistemaGestionResiduos.Infrastructure.AssemblyInfo.cs
 C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Infrastructure\obj\Debug\net8.0\SistemaGestionResiduos.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Infrastructure\obj\Debug\net8.0\SistemaGestionResiduos.Infrastructure.sourcelink.json
 C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Infrastructure\obj\Debug\net8.0\SistemaG.7B9D24DF.Up2Date
 C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Infrastructure\obj\Debug\net8.0\SistemaGestionResiduos.Infrastructure.dll
 C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Infrastructure\obj\Debug\net8.0\refint\SistemaGestionResiduos.Infrastructure.dll
