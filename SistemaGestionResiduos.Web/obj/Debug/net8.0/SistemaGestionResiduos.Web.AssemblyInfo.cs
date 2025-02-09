@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaGestionResiduos.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7e75e9f8bb643cb5ef4d11e9f7ebd36b815f8bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78316e4a8208e16a6058b5921a2637f289280fbc")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaGestionResiduos.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaGestionResiduos.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
