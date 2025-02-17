@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaGestionResiduos.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a2413c5c2b610afb589f849e18610afc12273cc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e47014edacf44428c60abe9d64247fc0eeadf9b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaGestionResiduos.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaGestionResiduos.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

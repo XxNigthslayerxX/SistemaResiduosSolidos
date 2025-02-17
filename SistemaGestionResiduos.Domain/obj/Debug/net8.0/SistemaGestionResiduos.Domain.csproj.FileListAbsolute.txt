@@ -21,3 +21,15 @@ C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\ne
 C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\refint\SistemaGestionResiduos.Domain.dll
 C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.pdb
 C:\Users\rusbe\Downloads\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\ref\SistemaGestionResiduos.Domain.dll
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\bin\Debug\net8.0\SistemaGestionResiduos.Domain.deps.json
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\bin\Debug\net8.0\SistemaGestionResiduos.Domain.dll
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\bin\Debug\net8.0\SistemaGestionResiduos.Domain.pdb
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.AssemblyInfoInputs.cache
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.AssemblyInfo.cs
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.csproj.CoreCompileInputs.cache
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.sourcelink.json
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.dll
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\refint\SistemaGestionResiduos.Domain.dll
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.pdb
+C:\Users\rusbe\Downloads\Respaldo\sistema-test\SistemaGestionResiduos.Domain\obj\Debug\net8.0\ref\SistemaGestionResiduos.Domain.dll
