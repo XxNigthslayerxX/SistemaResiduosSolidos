@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaGestionResiduos.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7e75e9f8bb643cb5ef4d11e9f7ebd36b815f8bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b2c9e30b48f8c48729ff49ab8ef8836527c6eb15")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaGestionResiduos.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaGestionResiduos.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
