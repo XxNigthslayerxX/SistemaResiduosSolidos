@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="col-md-6">
-        <form asp-action="Edit">
+        <form id="edit_recoleccion">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             
@@ -58,4 +58,76 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+            $("#edit_recoleccion").submit(function (event) {
+                event.preventDefault(); // Prevent default form submission
+
+                let isValid = true;
+
+                // Validate fields (ensure they are not empty)
+                $(".form-control").each(function () {
+                    if ($(this).val().trim() === "") {
+                        isValid = false;
+                        $(this).addClass("is-invalid"); // Add Bootstrap invalid class
+                        $(this).siblings(".text-danger").text("Este campo es obligatorio.");
+                    } else {
+                        $(this).removeClass("is-invalid"); // Remove the invalid class if corrected
+                        $(this).siblings(".text-danger").text(""); // Clear error message
+                    }
+                });
+
+                if (!isValid) {
+                    return; // Stop form submission if validation fails
+                }
+
+                // Collect form data
+                var formData = {
+                    Id:$("#Id").val(),
+                    Fecha: $("#Fecha").val(),
+                    PesoRecolectado: $("#PesoRecolectado").val(),
+                    TipoResiduo: $("#TipoResiduo").val(),
+                    Observaciones: $("#Observaciones").val(),
+                    ContenedorId: $("#ContenedorId").val()
+                };
+
+                // Send data using fetch
+                fetch(`http://localhost:5011/api/Recolecciones/${$("#Id").val()}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Accept': 'application/json, text/plain, */*',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error("Error en la solicitud");
+                    }
+                    return res.json();
+                })
+                .then(res => {
+                    console.log(res);
+                
+
+                    // Redirect after 3 seconds
+                    setTimeout(() => {
+                        window.location.href = "http://localhost:5095/Recolecciones";
+                    }, 3000);
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    
+                });
+            });
+
+            // Remove validation error on input change
+            $(".form-control").on("input", function () {
+                $(this).removeClass("is-invalid");
+                $(this).siblings(".text-danger").text("");
+            });
+        });
+    </script>
 }
+

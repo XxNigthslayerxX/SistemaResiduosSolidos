@@ -39,7 +39,7 @@ namespace SistemaGestionResiduos.Api.Controllers
         public async Task<ActionResult<Contenedor>> CreateContenedor(Contenedor contenedor)
         {
             var createdContenedor = await _contenedorService.CreateContenedorAsync(contenedor);
-            return CreatedAtAction(nameof(GetContenedor), new { id = createdContenedor.Id }, createdContenedor);
+            return Ok();
         }
 
         [HttpPut("{id}")]
@@ -51,14 +51,14 @@ namespace SistemaGestionResiduos.Api.Controllers
             }
 
             await _contenedorService.UpdateContenedorAsync(contenedor);
-            return NoContent();
+            return Ok(contenedor);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteContenedor(int id)
         {
             await _contenedorService.DeleteContenedorAsync(id);
-            return NoContent();
+            return Ok(id);
         }
     }
 }

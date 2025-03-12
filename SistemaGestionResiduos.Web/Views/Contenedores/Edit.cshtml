@@ -8,7 +8,7 @@
 
 <div class="row">
     <div class="col-md-6">
-        <form asp-action="Edit">
+        <form  id="edit_form_contenedores">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             
@@ -56,6 +56,88 @@
     </div>
 </div>
 
+
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        $(document).ready(function () {
+            // Verificar si hay rutas disponibles
+            var rutaSelect = $('#RutaId');
+            if (rutaSelect.length > 0) {
+                console.log('Opciones de ruta disponibles:');
+                rutaSelect.find('option').each(function() {
+                    console.log('- Value:', $(this).val(), 'Text:', $(this).text());
+                });
+            } else {
+                console.log('No se encontró el select de rutas');
+            }
+
+            $('#edit_form_contenedores').on('submit', function (e) {
+                e.preventDefault()
+                console.log('Formulario de contenedor enviado');
+                let id = $("#Id").val()
+                
+                // Obtener los valores del formulario
+                var formData = {
+                    Id:$("#Id").val(),
+                    Ubicacion: $('#Ubicacion').val(),
+                    Capacidad: parseFloat($('#Capacidad').val()),
+                    NivelLlenado: parseFloat($('#NivelLlenado').val()),
+                    TipoResiduo: $('#TipoResiduo').val(),
+                    RutaId: parseInt($('#RutaId').val())
+                };
+                
+
+                
+                // Validar que todos los campos requeridos estén llenos
+                if (!formData.Ubicacion || isNaN(formData.Capacidad) || isNaN(formData.NivelLlenado) || !formData.TipoResiduo || isNaN(formData.RutaId) || formData.RutaId <= 0) {
+                    console.log('Faltan campos requeridos o valores inválidos');
+                    if (formData.RutaId <= 0) {
+                        alert('Debe seleccionar una ruta válida');
+                    }
+                    e.preventDefault();
+                    return false;
+                }
+                
+                // Validar rangos numéricos
+                if (formData.Capacidad <= 0) {
+                    console.log('La capacidad debe ser mayor a 0');
+                    alert('La capacidad debe ser mayor a 0');
+                    e.preventDefault();
+                    return false;
+                }
+                
+                if (formData.NivelLlenado < 0 || formData.NivelLlenado > 100) {
+                    console.log('El nivel de llenado debe estar entre 0 y 100');
+                    alert('El nivel de llenado debe estar entre 0 y 100');
+                    e.preventDefault();
+                    return false;
+                }
+                
+                 console.log(formData)
+
+                  fetch(`http://localhost:5011/api/Contenedores/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Accept': 'application/json, text/plain, */*',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(res => res.json())
+                .then(res => console.log(res));
+
+                setTimeout(() => {
+  window.location.href = "http://localhost:5095/Contenedores";
+}, "3000");
+ 
+                
+
+                return true;
+ 
+ 
+            });
+        });
+    </script>
 }

@@ -8,36 +8,36 @@
 
 <div class="row">
     <div class="col-md-6">
-        <form asp-action="Create" id="createRutaForm">
+        <form id="createRutaForm">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             
             <div class="form-group">
                 <label asp-for="Nombre" class="control-label"></label>
-                <input asp-for="Nombre" class="form-control" />
+                <input asp-for="Nombre" class="form-control" id="Nombre" />
                 <span asp-validation-for="Nombre" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Descripcion" class="control-label"></label>
-                <textarea asp-for="Descripcion" class="form-control"></textarea>
+                <textarea asp-for="Descripcion" class="form-control" id="Descripcion"></textarea>
                 <span asp-validation-for="Descripcion" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="HoraInicio" class="control-label"></label>
-                <input asp-for="HoraInicio" class="form-control" type="time" />
+                <input asp-for="HoraInicio" class="form-control" type="time" id="HoraInicio" />
                 <span asp-validation-for="HoraInicio" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="HoraFin" class="control-label"></label>
-                <input asp-for="HoraFin" class="form-control" type="time" />
+                <input asp-for="HoraFin" class="form-control" type="time" id="HoraFin" />
                 <span asp-validation-for="HoraFin" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="DiasServicio" class="control-label"></label>
-                <select asp-for="DiasServicio" class="form-control">
+                <select asp-for="DiasServicio" class="form-control" id="DiasServicio">
                     <option value="Lunes,Miércoles,Viernes">Lunes, Miércoles, Viernes</option>
                     <option value="Martes,Jueves,Sábado">Martes, Jueves, Sábado</option>
                     <option value="Lunes a Viernes">Lunes a Viernes</option>
@@ -49,27 +49,25 @@
 
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="Activo" /> @Html.DisplayNameFor(model => model.Activo)
+                    <input class="form-check-input" asp-for="Activo" id="Activo" /> @Html.DisplayNameFor(model => model.Activo)
                 </label>
             </div>
 
             <div class="form-group mt-3">
-                <input type="submit" value="Crear" class="btn btn-primary" id="submitButton"/>
+                <input type="submit" value="Crear" class="btn btn-primary" id="submitButton" />
                 <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
             </div>
         </form>
     </div>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    
-    <script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
         $(document).ready(function () {
             $('#createRutaForm').on('submit', function (e) {
+                e.preventDefault();
                 console.log('Formulario enviado');
-                
-                // Obtener los valores del formulario
+
                 var formData = {
                     Nombre: $('#Nombre').val(),
                     Descripcion: $('#Descripcion').val(),
@@ -78,15 +76,38 @@
                     DiasServicio: $('#DiasServicio').val(),
                     Activo: $('#Activo').is(':checked')
                 };
-                
-                console.log('Datos del formulario:', formData);
-                
-                // Validar que todos los campos requeridos estén llenos
+
                 if (!formData.Nombre || !formData.HoraInicio || !formData.HoraFin || !formData.DiasServicio) {
                     console.log('Faltan campos requeridos');
                     return;
                 }
+
+            
+                
+                fetch('http://localhost:5011/api/rutas', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json, text/plain, */*',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                })
+                .then(res => res.json())
+                .then(res => console.log(res));
+
+                window.location.href = "http://localhost:5095/Rutas";
             });
         });
     </script>
-}
+
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+    }
+    
+   

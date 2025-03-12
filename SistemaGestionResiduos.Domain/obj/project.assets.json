@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Domain\\SistemaGestionResiduos.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Domain\\SistemaGestionResiduos.Domain.csproj",
       "projectName": "SistemaGestionResiduos.Domain",
-      "projectPath": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Domain\\SistemaGestionResiduos.Domain.csproj",
+      "projectPath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Domain\\SistemaGestionResiduos.Domain.csproj",
       "packagesPath": "C:\\Users\\rusbe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Domain\\obj\\",
+      "outputPath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rusbe\\AppData\\Roaming\\NuGet\\NuGet.Config",

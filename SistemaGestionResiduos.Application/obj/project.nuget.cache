@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HS6r5mxt7uo=",
+  "dgSpecHash": "h3Q1IYmwlL0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Application\\SistemaGestionResiduos.Application.csproj",
+  "projectFilePath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Application\\SistemaGestionResiduos.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rusbe\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.1\\microsoft.data.sqlite.core.9.0.1.nupkg.sha512",
     "C:\\Users\\rusbe\\.nuget\\packages\\microsoft.entityframeworkcore\\9.0.1\\microsoft.entityframeworkcore.9.0.1.nupkg.sha512",

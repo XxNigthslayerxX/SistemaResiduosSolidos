@@ -51,14 +51,14 @@ namespace SistemaGestionResiduos.Api.Controllers
             }
 
             await _recoleccionService.UpdateRecoleccionAsync(recoleccion);
-            return NoContent();
+            return Ok(id);
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRecoleccion(int id)
         {
             await _recoleccionService.DeleteRecoleccionAsync(id);
-            return NoContent();
+            return Ok(id);
         }
     }
 }

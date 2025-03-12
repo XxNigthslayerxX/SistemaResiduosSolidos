@@ -52,9 +52,47 @@
         </dd>
     </dl>
     
-    <form asp-action="Delete">
+    <form id="delete_contenedor">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Eliminar" class="btn btn-danger" />
         <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
     </form>
 </div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <script>
+        $(document).ready(function () {
+           
+          $('#delete_contenedor').on('submit', function (e) {
+                e.preventDefault()
+        
+                let id = $("#Id").val()
+                   
+
+                  fetch(`http://localhost:5011/api/Contenedores/${id}`, {
+                    method: 'DELETE',
+                    headers: {
+                        'Accept': 'application/json, text/plain, */*',
+                        'Content-Type': 'application/json'
+                    },
+                    body: []
+                })
+                .then(res => res.json())
+                .then(res => console.log(res));
+
+                setTimeout(() => {
+  window.location.href = "http://localhost:5095/Contenedores";
+}, "3000");
+ 
+                
+
+                return true;
+ 
+ 
+            });
+        });
+    </script>
+}

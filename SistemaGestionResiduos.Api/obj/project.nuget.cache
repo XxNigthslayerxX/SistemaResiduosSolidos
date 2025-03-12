@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Twyv+lxlX6Q=",
+  "dgSpecHash": "R4J3ejrt2R4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Api\\SistemaGestionResiduos.Api.csproj",
+  "projectFilePath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Api\\SistemaGestionResiduos.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rusbe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.8\\microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",
     "C:\\Users\\rusbe\\.nuget\\packages\\microsoft.data.sqlite.core\\9.0.1\\microsoft.data.sqlite.core.9.0.1.nupkg.sha512",

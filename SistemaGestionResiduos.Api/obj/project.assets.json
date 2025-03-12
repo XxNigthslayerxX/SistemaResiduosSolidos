@@ -1784,11 +1784,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Api\\SistemaGestionResiduos.Api.csproj",
+      "projectUniqueName": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Api\\SistemaGestionResiduos.Api.csproj",
       "projectName": "SistemaGestionResiduos.Api",
-      "projectPath": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Api\\SistemaGestionResiduos.Api.csproj",
+      "projectPath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Api\\SistemaGestionResiduos.Api.csproj",
       "packagesPath": "C:\\Users\\rusbe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Api\\obj\\",
+      "outputPath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rusbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -1806,14 +1806,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Application\\SistemaGestionResiduos.Application.csproj": {
-              "projectPath": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Application\\SistemaGestionResiduos.Application.csproj"
+            "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Application\\SistemaGestionResiduos.Application.csproj": {
+              "projectPath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Application\\SistemaGestionResiduos.Application.csproj"
             },
-            "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Domain\\SistemaGestionResiduos.Domain.csproj": {
-              "projectPath": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Domain\\SistemaGestionResiduos.Domain.csproj"
+            "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Domain\\SistemaGestionResiduos.Domain.csproj": {
+              "projectPath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Domain\\SistemaGestionResiduos.Domain.csproj"
             },
-            "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Infrastructure\\SistemaGestionResiduos.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\rusbe\\Downloads\\sistema-test\\SistemaGestionResiduos.Infrastructure\\SistemaGestionResiduos.Infrastructure.csproj"
+            "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Infrastructure\\SistemaGestionResiduos.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\rusbe\\Downloads\\Proyecto_Final_P2\\SistemaGestionResiduos.Infrastructure\\SistemaGestionResiduos.Infrastructure.csproj"
             }
           }
         }

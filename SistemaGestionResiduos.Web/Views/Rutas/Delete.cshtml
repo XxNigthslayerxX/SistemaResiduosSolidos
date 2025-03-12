@@ -52,9 +52,46 @@
         </dd>
     </dl>
     
-    <form asp-action="Delete">
+    <form id="delete_form">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Eliminar" class="btn btn-danger" />
         <a asp-action="Index" class="btn btn-secondary">Volver a la Lista</a>
     </form>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#delete_form').on('submit', function (e) {
+            e.preventDefault(); // Prevent default form submission
+            console.log('Formulario enviado');
+
+            let id = $('#Id').val();
+
+            if (!id) {
+                console.error('ID is missing');
+                return;
+            }
+
+            
+            fetch(`http://localhost:5011/api/rutas/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: {}
+            })
+            .then(response => {
+                if (response.ok) {
+                    window.location.href = "http://localhost:5095/Rutas";
+                }else{
+                    console.log("Error")
+                }
+                
+            })
+           
+        });
+    });
+</script>
+

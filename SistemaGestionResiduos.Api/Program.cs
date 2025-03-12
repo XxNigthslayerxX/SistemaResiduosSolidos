@@ -18,9 +18,20 @@ builder.Services.AddScoped<RutaService>();
 builder.Services.AddScoped<ContenedorService>();
 builder.Services.AddScoped<RecoleccionService>();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Add Swagger/OpenAPI services.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+// Add CORS policy to allow requests from http://localhost:5095.
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MyCorsPolicy", policyBuilder =>
+    {
+        policyBuilder.WithOrigins("http://localhost:5095")
+                     .AllowAnyHeader()
+                     .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -32,6 +43,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Use the CORS policy
+app.UseCors("MyCorsPolicy");
 
 app.UseAuthorization();
 

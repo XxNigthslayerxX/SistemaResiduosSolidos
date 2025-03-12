@@ -51,14 +51,14 @@ namespace SistemaGestionResiduos.Api.Controllers
             }
 
             await _rutaService.UpdateRutaAsync(ruta);
-            return NoContent();
+            return Ok();
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteRuta(int id)
         {
             await _rutaService.DeleteRutaAsync(id);
-            return NoContent();
+            return Ok();
         }
     }
 }
