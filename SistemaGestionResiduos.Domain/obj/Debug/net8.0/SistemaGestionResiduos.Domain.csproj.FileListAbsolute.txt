@@ -57,3 +57,15 @@ C:\Users\rusbe\Downloads\Proyecto_Final_P2\SistemaGestionResiduos.Domain\bin\Deb
 C:\Users\rusbe\Downloads\Proyecto_Final_P2\SistemaGestionResiduos.Domain\bin\Debug\net8.0\SistemaGestionResiduos.Domain.dll
 C:\Users\rusbe\Downloads\Proyecto_Final_P2\SistemaGestionResiduos.Domain\bin\Debug\net8.0\SistemaGestionResiduos.Domain.pdb
 C:\Users\rusbe\Downloads\Proyecto_Final_P2\SistemaGestionResiduos.Domain\obj\Debug\net8.0\ref\SistemaGestionResiduos.Domain.dll
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.AssemblyInfoInputs.cache
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.AssemblyInfo.cs
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.csproj.CoreCompileInputs.cache
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.sourcelink.json
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.dll
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\obj\Debug\net8.0\refint\SistemaGestionResiduos.Domain.dll
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\obj\Debug\net8.0\SistemaGestionResiduos.Domain.pdb
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\bin\Debug\net8.0\SistemaGestionResiduos.Domain.deps.json
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\bin\Debug\net8.0\SistemaGestionResiduos.Domain.dll
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\bin\Debug\net8.0\SistemaGestionResiduos.Domain.pdb
+C:\Users\rusbe\OneDrive\Escritorio\Proyecto_Final_P2\SistemaGestionResiduos.Domain\obj\Debug\net8.0\ref\SistemaGestionResiduos.Domain.dll
